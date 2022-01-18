@@ -69,7 +69,7 @@ $(window).on('load', function() {
 	------------------------*/
 
 	var CarouselItem = function () {
-		var folder = './img/images'
+		var folder = '/img/images'
 		var i = 0;
 		var fileExt = [];
 		fileExt[0]=".png";
@@ -80,7 +80,7 @@ $(window).on('load', function() {
 
 			for (i =0; i < files.length/3; i++){
 					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+					var filename = files[i].href.replace("http://", "");
 					console.log(i +"=>" +filename)
 
 					$('.carouselItem').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
