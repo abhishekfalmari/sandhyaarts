@@ -83,34 +83,34 @@ $(window).on('load', function() {
 					var filename = files[i].href.replace("http://", "");
 					console.log(i +"=>" +filename)
 
-					$('.carouselItem').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
-													<a href="images.html" class="hero-link">
-														<h2>Take a look at my Portfolio</h2>
-													</a>
-												</div>`);
+					// $('.carouselItem').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
+					// 								<a href="images.html" class="hero-link">
+					// 									<h2>Take a look at my Portfolio</h2>
+					// 								</a>
+					// 							</div>`);
 				};
-			for (i = parseInt(files.length/3); i < parseInt(files.length/3*2); i++){
-					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
-					console.log(i +"=>" +filename)
+			// for (i = parseInt(files.length/3); i < parseInt(files.length/3*2); i++){
+			// 		//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
+			// 		var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+			// 		console.log(i +"=>" +filename)
 
-					$('.carouselItem1').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
-													<a href="images.html" class="hero-link">
-														<h2>Take a look at my Portfolio</h2>
-													</a>
-												</div>`);
-				};
-			for (i = parseInt(files.length/3*2); i < files.length; i++){
-					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
-					console.log(i +"=>" +filename)
+			// 		$('.carouselItem1').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
+			// 										<a href="images.html" class="hero-link">
+			// 											<h2>Take a look at my Portfolio</h2>
+			// 										</a>
+			// 									</div>`);
+			// 	};
+			// for (i = parseInt(files.length/3*2); i < files.length; i++){
+			// 		//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
+			// 		var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+			// 		console.log(i +"=>" +filename)
 
-					$('.carouselItem2').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
-													<a href="images.html" class="hero-link">
-														<h2>Take a look at my Portfolio</h2>
-													</a>
-												</div>`);
-				};
+			// 		$('.carouselItem2').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
+			// 										<a href="images.html" class="hero-link">
+			// 											<h2>Take a look at my Portfolio</h2>
+			// 										</a>
+			// 									</div>`);
+			// 	};
 			}	
 		});
 	}
