@@ -120,34 +120,34 @@ $(window).on('load', function() {
 		Portfolio item load
 	------------------------*/
 
-	var PortfolioItem = function () {
-		var folder = './img/images'
-		var i = 0;
-		var fileExt = [];
-		fileExt[0]=".png";
-		fileExt[1]=".jpg";
+	// var PortfolioItem = function () {
+	// 	var folder = './img/images'
+	// 	var i = 0;
+	// 	var fileExt = [];
+	// 	fileExt[0]=".png";
+	// 	fileExt[1]=".jpg";
 
-		$.get({url: folder, async: false, success: function(data){
-			var files = $(data).find("a:contains(" + fileExt[0] + "),a:contains(" + fileExt[1] + ")")
+	// 	$.get({url: folder, async: false, success: function(data){
+	// 		var files = $(data).find("a:contains(" + fileExt[0] + "),a:contains(" + fileExt[1] + ")")
 
-			for (i =0; i < files.length; i++){
-					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
-					console.log(i +"=>" +filename)
+	// 		for (i =0; i < files.length; i++){
+	// 				//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
+	// 				var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+	// 				console.log(i +"=>" +filename)
 
-					$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
-													<a href="`+filename+`" class="portfolio-item img-popup set-bg" data-setbg="`+filename+`" style="background-image: url("`+filename+`"); height: 253.2px;"></a>
-												</div>`);
-				};
-			}	
-		});
-		$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
-										<div class="portfolio-item  next-btn">
-											<h2>Next</h2>
-										</div>
-									</div>`);
-	}
-	PortfolioItem();
+	// 				$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
+	// 												<a href="`+filename+`" class="portfolio-item img-popup set-bg" data-setbg="`+filename+`" style="background-image: url("`+filename+`"); height: 253.2px;"></a>
+	// 											</div>`);
+	// 			};
+	// 		}	
+	// 	});
+	// 	$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
+	// 									<div class="portfolio-item  next-btn">
+	// 										<h2>Next</h2>
+	// 									</div>
+	// 								</div>`);
+	// }
+	// PortfolioItem();
 
 	/*------------------
 		Navigation
