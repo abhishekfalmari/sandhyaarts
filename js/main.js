@@ -83,7 +83,7 @@ $(window).on('load', function() {
 
 			for (i =0; i < files.length/3; i++){
 					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+					var filename = files[i].href.replace(window.location.host, "./img/images").replace("http://", "").replace("https://", "");
 					console.log(i +"=>" +filename)
 
 					$('.carouselItem').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
@@ -94,7 +94,7 @@ $(window).on('load', function() {
 				};
 			for (i = parseInt(files.length/3); i < parseInt(files.length/3*2); i++){
 					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+					var filename = files[i].href.replace(window.location.host, "./img/images").replace("http://", "").replace("https://", "");
 					console.log(i +"=>" +filename)
 
 					$('.carouselItem1').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
@@ -105,7 +105,7 @@ $(window).on('load', function() {
 				};
 			for (i = parseInt(files.length/3*2); i < files.length; i++){
 					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+					var filename = files[i].href.replace(window.location.host, "./img/images").replace("http://", "").replace("https://", "");
 					console.log(i +"=>" +filename)
 
 					$('.carouselItem2').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
@@ -135,7 +135,7 @@ $(window).on('load', function() {
 
 			for (i =0; i < files.length; i++){
 					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+					var filename = files[i].href.replace(window.location.host, "").replace("http://", "").replace("https://", "");
 					console.log(i +"=>" +filename)
 
 					$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
