@@ -60,7 +60,10 @@ $(window).on('load', function() {
 			}
 		});
 	}
+
+	
 });
+	
 
 (function($) {
 
@@ -69,7 +72,7 @@ $(window).on('load', function() {
 	------------------------*/
 
 	var CarouselItem = function () {
-		var folder = '/img/images'
+		var folder = './img/images'
 		var i = 0;
 		var fileExt = [];
 		fileExt[0]=".png";
@@ -80,74 +83,102 @@ $(window).on('load', function() {
 
 			for (i =0; i < files.length/3; i++){
 					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-					var filename = files[i].href.replace("http://", "");
+					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
 					console.log(i +"=>" +filename)
 
-					// $('.carouselItem').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
-					// 								<a href="images.html" class="hero-link">
-					// 									<h2>Take a look at my Portfolio</h2>
-					// 								</a>
-					// 							</div>`);
+					$('.carouselItem').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
+													<a href="images.html" class="hero-link">
+														<h2>Take a look at my Portfolio</h2>
+													</a>
+												</div>`);
 				};
-			// for (i = parseInt(files.length/3); i < parseInt(files.length/3*2); i++){
-			// 		//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-			// 		var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
-			// 		console.log(i +"=>" +filename)
+			for (i = parseInt(files.length/3); i < parseInt(files.length/3*2); i++){
+					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
+					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+					console.log(i +"=>" +filename)
 
-			// 		$('.carouselItem1').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
-			// 										<a href="images.html" class="hero-link">
-			// 											<h2>Take a look at my Portfolio</h2>
-			// 										</a>
-			// 									</div>`);
-			// 	};
-			// for (i = parseInt(files.length/3*2); i < files.length; i++){
-			// 		//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-			// 		var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
-			// 		console.log(i +"=>" +filename)
+					$('.carouselItem1').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
+													<a href="images.html" class="hero-link">
+														<h2>Take a look at my Portfolio</h2>
+													</a>
+												</div>`);
+				};
+			for (i = parseInt(files.length/3*2); i < files.length; i++){
+					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
+					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+					console.log(i +"=>" +filename)
 
-			// 		$('.carouselItem2').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
-			// 										<a href="images.html" class="hero-link">
-			// 											<h2>Take a look at my Portfolio</h2>
-			// 										</a>
-			// 									</div>`);
-			// 	};
+					$('.carouselItem2').append(`<div class="hero-item portfolio-item set-bg" data-setbg="`+filename+`" style="background-image: url('`+filename+`'); height: 217.025px;"> 
+													<a href="images.html" class="hero-link">
+														<h2>Take a look at my Portfolio</h2>
+													</a>
+												</div>`);
+				};
 			}	
 		});
 	}
 	CarouselItem();
 
-	/*----------------------
-		Portfolio item load
-	------------------------*/
+	/*------------------------
+	   Portfolio Images load
+	--------------------------*/
 
-	// var PortfolioItem = function () {
-	// 	var folder = './img/images'
-	// 	var i = 0;
-	// 	var fileExt = [];
-	// 	fileExt[0]=".png";
-	// 	fileExt[1]=".jpg";
+	var PortfolioItem = function () {
+		var folder = './img/images'
+		var i = 0;
+		var fileExt = [];
+		fileExt[0]=".png";
+		fileExt[1]=".jpg";
 
-	// 	$.get({url: folder, async: false, success: function(data){
-	// 		var files = $(data).find("a:contains(" + fileExt[0] + "),a:contains(" + fileExt[1] + ")")
+		$.get({url: folder, async: false, success: function(data){
+			var files = $(data).find("a:contains(" + fileExt[0] + "),a:contains(" + fileExt[1] + ")")
 
-	// 		for (i =0; i < files.length; i++){
-	// 				//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
-	// 				var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
-	// 				console.log(i +"=>" +filename)
+			for (i =0; i < files.length; i++){
+					//  var filename = this.href.replace(window.location.host, "./img/images").replace("http://", "");
+					var filename = files[i].href.replace(window.location.host, "").replace("http://", "");
+					console.log(i +"=>" +filename)
 
-	// 				$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
-	// 												<a href="`+filename+`" class="portfolio-item img-popup set-bg" data-setbg="`+filename+`" style="background-image: url("`+filename+`"); height: 253.2px;"></a>
-	// 											</div>`);
-	// 			};
-	// 		}	
-	// 	});
-	// 	$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
-	// 									<div class="portfolio-item  next-btn">
-	// 										<h2>Next</h2>
-	// 									</div>
-	// 								</div>`);
-	// }
-	// PortfolioItem();
+					$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
+													<a href="`+filename+`" class="portfolio-item img-popup set-bg" data-setbg="`+filename+`" style="background-image: url("`+filename+`"); height: 253.2px;"></a>
+												</div>`);
+				};
+			}	
+		});
+		$('.portfolioItem').append(`<div class="mix col-xl-2 col-md-3 col-sm-4 col-6 p-0">
+										<div class="portfolio-item  next-btn">
+											<h2>Next</h2>
+										</div>
+									</div>`);
+	}
+	PortfolioItem();
+
+	/*--------------------
+	   Video Items load
+	----------------------*/
+
+	var VideoItem = function () {
+		var file = './videos.txt'
+		var itemList;
+		fetch(file)
+		.then(response => response.text())
+		.then(text => {
+			// console.log(text)
+			text = text.split("\r\n")
+			console.log(text)
+			text.forEach(item => {
+				item = 	item.replace("https://www.youtube.com/watch?v=","")			
+				console.log(item)
+				$('.videoItems').append(`<div class="mix col-lg-4 col-sm-6 p-0">
+												<div class="portfolio-box">
+													<div class="portfolio-item set-bg" style="height: 371.325px;">
+														<iframe width="100%" height="100%" src="https://www.youtube.com/embed/`+item+`" allowfullscreen></iframe>
+													</div>
+												</div>
+											</div>`);
+			});
+		});
+	}
+	VideoItem();
 
 	/*------------------
 		Navigation
@@ -171,21 +202,6 @@ $(window).on('load', function() {
 	if(localStorage.getItem("navMenu") == "show") {
 		$('.main-menu').slideDown(400);
 	}
-
-
-	// /*------------------
-	// 	Search model
-	// --------------------*/
-	// $('.search-btn').on('click', function() {
-	// 	$('.search-model').fadeIn(400);
-	// });
-
-	// $('.search-close-switch').on('click', function() {
-	// 	$('.search-model').fadeOut(400,function(){
-	// 		$('#search-input').val('');
-	// 	});
-	// });
-
 
 	/*------------------
 		Background Set
@@ -315,20 +331,6 @@ $(window).on('load', function() {
 
 	});
 
-
-	/*------------------
-		Instafeed
-	--------------------*/
-	var userFeed = new Instafeed({
-        get: 'user',
-        userId: '19261155319', // User your ID
-        limit: 12,
-        resolution: 'standard_resolution',
-        accessToken: '19261155319.1677ed0.3640b426adf9468daaa26b64b1496040', // User your accessToken
-		sortBy: 'least-recent',
-		limit: 15,
-        template: '<div class="instaimg"><a href="{{link}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}" class="img-fluid"/></a></div>',
-	});
 	
 	if($('#instafeed').length > 0) {
 		userFeed.run();
